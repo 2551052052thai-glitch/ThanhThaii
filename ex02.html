@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 02</title>
+    <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap">
+<style>
+    *{box-sizing: border-box;}
+    body{
+        font-family: Arial, sans-serif;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+    a{
+        text-decoration: none;color :darkblue;
+    }
+    ul{
+        list-style: none;margin:0; padding :0;
+    }
+    header, nav, footer{
+            background: linear-gradient(to bottom right, blue, lightblue, white);
+        }
+    header{
+        display:flex; align-items :center;padding: 10px 20px;
+    }
+    .brand{
+        font-family: 'pacifico',cursive;
+        font-size: 28px;color:white;
+    }
+    .brand img{
+        width: 50px; margin-right: 10px;
+    }
+    .ads{
+            flex: 1; display: flex; justify-content: center;
+        }
+        .ads div{
+            border: 2px dashed darkblue; padding: 15px 10px; margin: 0 5px;
+        }
+
+        /* Menu */
+        nav > ul{
+            display: flex; justify-content: center;
+        }
+        nav li{
+            position: relative;
+        }
+        nav a{
+            display: block; padding: 10px 20px;
+        }
+        nav li:hover > a{
+            background: darkblue; color: white;
+        }
+
+        /* Sub menu */
+        nav ul ul{
+            display: none;
+            position: absolute;
+            top: 100%; left: 0;
+            width: 220px;
+            background: lightblue;
+        }
+        nav ul ul::before{
+            content: "";
+            position: absolute;
+            top: -20px; left: 20px;
+            border: 10px solid transparent;
+            border-bottom-color: white;
+        }
+        nav li:hover > ul{
+            display: block;
+        }
+
+        /* Content */
+        .content{
+            display: flex; padding: 20px 0;
+        }
+        aside{
+            width: 240px; margin-right: 20px;
+        }
+        aside li{
+            padding: 8px; margin-bottom: 6px;
+            background: linear-gradient(lightblue, white);
+        }
+        aside li:hover{
+            background: darkblue; color: white;
+        }
+        main{
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+        }
+        main img{
+            width: 100%; box-shadow: 3px 3px 8px gray;
+        }
+        main p{
+            margin: 5px 0; text-align: center; font-size: 12px;
+        }
+
+        footer{
+            text-align: center; padding: 15px;
+        }
+</style>
+</head>
+<body>
+    <header>
+        <div class="brand">
+            <img src="img/logo.png"alt="logo">
+            My Bookstore
+        </div>
+        <div class="ads">
+            <div>Advertise here</div>
+            <div>Advertise here</div>
+            <div>Advertise here</div>
+        </div>
+        <input type="search" placeholder="Search books...">
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li>
+                <a href="#">Book Categories</a>
+                <ul>
+                    <li><a href="#">IT Fundamentals</a></li>
+                    <li><a href="#">Software Engineering</a></li>
+                    <li><a href="#">Artificial Intelligence</a></li>
+                    <li><a href="#">Computer Networks</a></li>
+                    <li><a href="#">Internet of Things (IoT)</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Stationery</a></li>
+            <li><a href="#">Promotion</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <aside>
+            <h3>BOOK CATEGORIES</h3>
+            <ul>
+                <li>IT Fundamentals</li>
+                <li>Software Engineering</li>
+                <li>Artificial Intelligence</li>
+                <li>Computer Networks</li>
+                <li>Internet of Things (IoT)</li>
+            </ul>
+        </aside>
+
+        <main>
+            <div><img src="img/book1.png" alt="book1"><p>HTML &amp; CSS</p></div>
+            <div><img src="img/book2.png" alt="book2"><p>JavaScript</p></div>
+            <div><img src="img/book3.png" alt="book3"><p>Java Programming</p></div>
+            <div><img src="img/book4.png" alt="book4"><p>Software Testing</p></div>
+            <div><img src="img/book5.png" alt="book5"><p>Discrete Math</p></div>
+            <div><img src="img/book6.png" alt="book6"><p>Python</p></div>
+            <div><img src="img/book7.png" alt="book7"><p>Databases</p></div>
+            <div><img src="img/book8.png" alt="book8"><p>Networking</p></div>
+            <div><img src="img/book9.png" alt="book9"><p>AI Basics</p></div>
+            <div><img src="img/book10.png" alt="book10"><p>Internet of Things</p></div>
+        </main>
+    </div>
+
+    <footer>My Bookstore &copy; 2026</footer>
+</body>
+</html>
